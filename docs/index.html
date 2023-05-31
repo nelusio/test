@@ -1,16 +1,10 @@
 <html>
 <head>
-     <script>
- window.setInterval("reloadIFrame();", 3000);
-
- function reloadIFrame() {
-  document.frames["test"].location.reload();
- }
- </script> 
+  <script>        window.setInterval(function() {            reloadIFrame()        }, 3000);        function reloadIFrame() {            console.log('reloading..');            document.getElementById('test').contentWindow.location.reload();        }    </script>
     
 </head>
 <body onload="refreshIFrame()">
-    <iframe name="test" id="test" width="336" height="396" seamless frameborder="0" 
+    <iframe id="test" width="336" height="396" seamless frameborder="0" 
         scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSTal4LEb_vT2vGBCEhPuMDLTdWpjbldC8EadLEDaF2HO7N_ZNT7piG-AKnZBEJNw/pubchart?oid=1819285659&amp;format=interactive"></iframe>
 
 </body>
